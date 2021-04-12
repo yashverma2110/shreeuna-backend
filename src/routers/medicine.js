@@ -7,7 +7,7 @@ const Category = require("../models/category");
 
 router.get("/get/medicine", async (req, res) => {
   try {
-    const medicine = await Medicine.find({}, null, { sort: { title: 1 } });
+    const medicine = await Medicine.find({}, null, { sort: { title: -1 } });
     res.json({ medicine });
   } catch (e) {
     res.status(500).send(e);
