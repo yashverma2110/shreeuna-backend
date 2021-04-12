@@ -20,8 +20,8 @@ dotenv.config();
 app.use(function (req, res, next) {
   var allowedOrigins = [
     "http://localhost:3000",
-    "https://shreeuna.herokuapp.com/",
-    "http://shreeuna.herokuapp.com/",
+    "https://shreeuna.herokuapp.com",
+    "http://shreeuna.herokuapp.com",
   ];
   var origin = req.headers.origin;
   if (allowedOrigins.indexOf(origin) > -1) {
