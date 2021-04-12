@@ -26,7 +26,7 @@ router.get("/get/categories", async (req, res) => {
 
 router.get("/get/categories/withmeds", async (req, res) => {
   try {
-    const category = await Category.find({}).populate("medicine");
+    const category = await Category.find({}, null, { sort: { name: 1 } });
     res.json({ category });
   } catch (error) {
     res.status(500).send(error);
